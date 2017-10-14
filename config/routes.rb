@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  resources :shops
   resources :categories
+  
   resources :articles
   get 'pages/index'
   
