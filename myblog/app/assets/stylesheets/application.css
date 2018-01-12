@@ -73,3 +73,8 @@ textarea {
 .command {
   font-size: 12px;
 }
+
+h3 {
+  font-size: 14;
+  padding-top: 25px;
+}
