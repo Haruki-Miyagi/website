@@ -9,6 +9,7 @@
     <% @post.comments.each do |comment| %>
       <li>
         <%= comment.body %>
+        <%= link_to '[x]', post_comment_path(@post, comment),method: :delete, data: {confirm: 'Are You OK?'}, class: 'command' %>
       </li>
     <% end %>
   </ul>
