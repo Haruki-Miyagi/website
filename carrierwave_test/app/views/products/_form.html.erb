@@ -1,3 +1,6 @@
+
+
+
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
@@ -22,12 +25,12 @@
   <!-- 追加箇所 開始 -->
   <div class="field">
     <% if @product.image? %>
-      <div class="thumbnail">
+      <div class="thumbnail image">
         <%= image_tag @product.image.url %>
       </div>
     <% end %><br>
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
+
+    <%= f.file_field :image, input_html: { onChange: 'loadFile(event)' } %>
     <%= f.hidden_field :image_cache %>
   </div>
   <div class="field">
