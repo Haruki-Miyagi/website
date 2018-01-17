@@ -2,6 +2,13 @@
   <%= link_to 'Add New', new_post_path, class: 'header-menu' %>
   My Posts
 </h2>
+
+
+<!-- 追加箇所開始 -->
+<%= page_entries_info @posts %>
+<!-- 追加箇所終了 -->
+
+
 <ul>
   <% @posts.each do |post| %>
   <li>
@@ -9,5 +16,10 @@
     <%= link_to '[Edit]', edit_post_path(post), class: 'command' %>
     <%= link_to '[x]', post_path(post),method: :delete, data: {confirm: 'Are You OK?'}, class: 'command' %>
   </li>
+
   <% end %>
 </ul>
+
+<!-- 追加箇所開始 -->
+<%= paginate @posts %>
+<!-- 追加箇所終了 -->
