@@ -7,6 +7,31 @@
 <p><%= simple_format @post.body %></P>
 
 
+<h3 class='comment'>Comments</h3>
+
+<% if @post.comments.any? %>
+  <ul>
+    <% @post.comments.each do |comment| %>
+    <li>
+      <%= comment.body %>
+      <%= link_to "[x]", post_comment_path(@post, comment), method: :DELETE, data: {confirm: 'sure ?'},class: 'command' %>
+    </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for ([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.label :body, 'comments' %>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
+
 
 
 <br/><br/><br/><br/><br/><br/>
