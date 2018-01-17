@@ -72,3 +72,17 @@ textarea {
 .command {
   font-size: 14px;
 }
+
+#pos {
+  position: fixed;
+  left:5px;
+  bottom:5px;
+}
+
+#back-to-top {
+  position: fixed;
+  font-size: 50px;
+  text-decoration: none;
+  right: 10px;
+  bottom: 10px;
+}
