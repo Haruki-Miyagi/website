@@ -12,26 +12,4 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require jquery
-//= require bootstrap-sprockets
 //= require_tree .
-
-
-$(function(){
-  $('#back-to-top').hide();
-
-  $(window).scroll(function(){
-    $('#pos').text($(this).scrollTop());
-    if ($(this).scrollTop() > 600) {
-      $('#back-to-top').fadeIn();
-    } else {
-      $('#back-to-top').fadeOut();
-    }
-  });
-  $('#back-to-top a').click(function(){
-    $('body').animate({
-      scrollTop:0
-    }, 5000);
-    $(this).fadeOut();
-  });
-});
