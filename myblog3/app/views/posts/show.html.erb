@@ -1,8 +1,10 @@
 <h2>-----Show page!------</h2>
 
 <p>
+  <span>title-post</span><br/>
   <%= @post.title %>
 </p>
 <p>
-  <%= @post.body %>
+  <span>body-post</span><br/>
+  <%= simple_format @post.body %>
 </p>
