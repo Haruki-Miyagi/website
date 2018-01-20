@@ -17,3 +17,29 @@
     <%= simple_format @post.body %>
   </div>
 </div>
+
+<% if @post.comments.any? %>
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">-----Comments-----</h3>
+  </div>
+  <div class="panel-body show-text">
+    <% @post.comments.each do |comment| %>
+      <li>
+        <%= comment.body %>
+        <%= link_to '[x]', post_comment_path(@post, comment),method: :delete, data: {confirm: 'Are You OK?'}, class: 'command' %>
+      </li>
+    <% end %>
+  </div>
+</div>
+<% end %>
+
+
+<%= form_for ([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
