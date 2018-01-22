@@ -15,3 +15,24 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
+
+
+
+$(function(){
+  //最初の画面を隠す
+  $('#back-top').hide();
+
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 600) {
+      $('#back-top').fadeIn();
+    } else {
+      $('#back-top').fadeOut();
+    }
+  });
+  $('#back-top a').click(function(){
+    $('body').animate({
+      scrollTop:0
+    }, 5000);
+    $(this).fadeOut();
+  });
+});

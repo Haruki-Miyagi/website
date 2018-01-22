@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-10.times do |i|
+100.times do |i|
   Post.create(title: "title#{i}", body: "body#{i}")
 end

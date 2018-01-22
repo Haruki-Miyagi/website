@@ -9,8 +9,11 @@
   </head>
 
   <body>
-    <%= image_tag 'logo 2.png', class: 'image-top' %>
+    <%= link_to (image_tag 'logo 2.png', class: 'image-top'), root_path %>
     <%= render 'layouts/nab' %>
       <%= yield %>
+      <div id='back-top'>
+        <%= link_to 'back-top' %>
+      </div>
   </body>
 </html>
