@@ -19,16 +19,19 @@
 
 
 $(function(){
-  //最初の画面を隠す
+  //隠す
   $('#back-top').hide();
 
+  //scroll
   $(window).scroll(function(){
-    if ($(this).scrollTop() > 600) {
+    if ($(this).scrollTop() > 600 ){
       $('#back-top').fadeIn();
     } else {
       $('#back-top').fadeOut();
     }
   });
+
+  //top に
   $('#back-top a').click(function(){
     $('body').animate({
       scrollTop:0
