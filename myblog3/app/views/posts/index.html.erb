@@ -1,8 +1,17 @@
 <h2>-----Hello! index posts-----</h2>
 
-<ul>
+<div class="form-group">
+  <%= label_tag :search, 'post search' %>
+  <%= form_tag(posts_path, method: :get) do %>
+    <%= text_field_tag :search, '', class: 'form-control',placeholder:"Search" %>
+    <%= submit_tag 'Search',class:"btn btn-default sarch_box", :name => nil %>
+  <% end %>
+</div>
+
+
+<ul class ='ul-text'>
   <% @posts.each do |post| %>
-    <li>
+    <li class ='list-text'>
       <%= link_to post.title, post_path(post) %>
       <%= link_to "[Edit]", edit_post_path(post), class: 'command' %>
       <%= link_to "[x]", post_path(post),method: :delete , data: {confirm: 'sure?'}, class: 'command' %>

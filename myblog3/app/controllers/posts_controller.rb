@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.search(params[:search]).order(created_at: :desc)
   end
 
   def show
@@ -44,5 +44,5 @@ class PostsController < ApplicationController
     def posts_params
       params.require(:post).permit(:title, :body)
     end
-    
+
 end
