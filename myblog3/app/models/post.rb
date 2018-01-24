@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  paginates_per 25
   has_many :comments
 
   validates :title, presence: true, length: { minimum: 3, message: '3文字以上'}

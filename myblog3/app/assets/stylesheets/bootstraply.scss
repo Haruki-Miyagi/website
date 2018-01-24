@@ -24,11 +24,23 @@ textarea {
   padding-right: 50px;
 }
 
-#back-top, #pop {
+#back-top, #pop, {
   font-size: 20px;
   position:fixed;
   right: 400px;
   bottom: 250px;
+}
+#back-text {
+  font-size: 20px;
+  position:fixed;
+  left: 400px;
+  bottom: 250px;
+}
+.back-text-text {
+  font-size: 20px;
+  position:fixed;
+  left: 360px;
+  bottom: 280px;
 }
 
 .sarch_box {

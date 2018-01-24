@@ -24,7 +24,8 @@ $(function(){
 
   //scroll
   $(window).scroll(function(){
-    if ($(this).scrollTop() > 600 ){
+    $('#back-text').text($(this).scrollTop());
+    if ($(this).scrollTop() > 370 ){
       $('#back-top').fadeIn();
     } else {
       $('#back-top').fadeOut();
