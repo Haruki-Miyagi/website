@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  mount_uploader :image, ImageUploader
   paginates_per 25
   has_many :comments
 

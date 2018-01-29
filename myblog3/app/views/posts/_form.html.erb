@@ -1,6 +1,6 @@
 
 
-<%= form_for @post do |f| %>
+<%= form_for @post, :html => {:multipart => true} do |f| %>
 <p>
   <%= f.label :title %>
   <%= f.text_field :title, placeholder: 'enter title' %>
@@ -8,6 +8,12 @@
 <p>
   <%= f.label :body %>
   <%= f.text_area :body, placeholder: 'enter body' %>
+</p>
+<p>
+  <%= f.label :image %>
+　<%= image_tag @post.image.thumb.url if @post.image? %>
+　<%= f.file_field :image %>
+　<%= f.hidden_field :image_cache %>
 </p>
 <p>
   <%= f.submit %>

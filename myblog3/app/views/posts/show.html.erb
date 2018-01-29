@@ -1,5 +1,9 @@
 <h2>-----Show page!------</h2>
 
+  <% if @post.image? %>
+　　<%= image_tag @post.image.url,class: 'image-size' %>
+　<% end %>
+
 <div class="panel panel-warning">
   <div class="panel-heading">
     <h3 class="panel-title">Post title</h3>

@@ -34,3 +34,8 @@ h2 {
 ul {
   padding-left: 80px
 }
+
+.image-size {
+  width: 400px;
+  height: 266px;
+}
