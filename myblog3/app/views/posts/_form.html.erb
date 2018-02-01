@@ -11,7 +11,7 @@
 </p>
 <p>
   <%= f.label :image %>
-　<%= image_tag @post.image.thumb.url if @post.image? %>
+　<%= image_tag @post.image.url, class:'image-size' if @post.image? %>
 　<%= f.file_field :image %>
 　<%= f.hidden_field :image_cache %>
 </p>
