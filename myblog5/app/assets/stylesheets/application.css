@@ -28,11 +28,25 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 0, .5)
 }
 
+.toppage {
+  text-decoration: none;
+}
+
 h2 {
   font-size: 23px;
   margin: 0 10px 10px;
   padding-bottom: 12px;
   border-bottom: 1px solid #BBB;
+}
+
+.newpost {
+  text-decoration: none;
+  float: right;
+  padding-top: 3px;
+}
+
+.clear-right {
+  clear: right;
 }
 
 ul > li {
@@ -46,10 +60,37 @@ p {
 
 #back-top {
   float: right;
+  padding-right: 6px;
 }
 
 .clear-fix:after {
 	content: " ";
 	display: table;
 	clear: both;
+}
+
+label {
+  padding-bottom: .5em;
+}
+
+input[type='text'], textarea {
+  width: 370px;
+  font-size: 1.2em;
+  border: 0;
+  border-bottom: 1px solid #d1d1d1;
+  padding: .3em;
+}
+
+textarea {
+  height: 100px;
+  border: 1px solid #d1d1d1;
+}
+
+input[type='submit'] {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  background-color: #2096F3;
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .4);
 }

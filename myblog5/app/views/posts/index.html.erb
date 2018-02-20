@@ -1,4 +1,7 @@
-<h2>My Posts</h2>
+<h2 class="clear-right">
+  My Posts
+  <%= link_to 'New Post', new_post_path, class: 'newpost' %>
+</h2>
 
 <ul>
   <% @posts.each do |post| %>
