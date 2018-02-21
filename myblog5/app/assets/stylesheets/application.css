@@ -94,3 +94,21 @@ input[type='submit'] {
   border-radius: 3px;
   box-shadow: 0 0 8px rgba(0, 0, 0, .4);
 }
+
+.errors-color {
+  color: tomato;
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.command {
+  font-size: .7em;
+}
+
+.edit-margin-left {
+  margin-left: 10px;
+}
+
+.title-size {
+  font-size: 30px;
+}

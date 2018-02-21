@@ -1,0 +1,20 @@
+
+<%= form_for @post do |f| %>
+  <p>
+    <%= f.label :title %>
+    <% if @post.errors.messages[:title].any? %>
+      <span class='errors-color'><%= @post.errors.messages[:title][0] %></span>
+    <% end %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %>
+    <% if @post.errors.messages[:body].any? %>
+      <span class='errors-color'><%= @post.errors.messages[:body][0] %></span>
+    <% end %>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
