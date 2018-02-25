@@ -4,6 +4,30 @@
   <%= simple_format @post.body %>
 </p>
 
+<!-- Comment -->
+<h2><label for='comment'>Comment</label></h2>
+
+<% if @post.comments.any? %>
+  <ul>
+    <% @post.comments.each do |comment| %>
+    <li>
+      <%= comment.body %>
+      <%= link_to "[x]", post_comment_path(@post, comment), method: :DELETE, data: {confirm: 'Are You OK ?'}, class: 'command' %>
+    </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for ([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.text_field :body, id: 'comment' %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<!-- end -->
+
 <div class='clear-fix'>
   <%= link_to 'Back', :back, id: 'back-top' %>
 </div>
