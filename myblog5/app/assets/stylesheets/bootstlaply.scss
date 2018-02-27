@@ -1,0 +1,13 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.header_space {
+  margin-top: 20px;
+  padding: 3px 0;
+}
+
+ul > li {
+  padding-bottom: 10px;
+}
