@@ -26,4 +26,7 @@ class HerosController < ApplicationController
     @hero_image = Faker::Avatar.image(@rand_num, "350x350", "png", @set, @gackground)
   end
 
+  def new
+  end
+
 end
