@@ -27,6 +27,7 @@ class HerosController < ApplicationController
   end
 
   def new
+    @team_number = params[:team_number].to_i
   end
 
 end

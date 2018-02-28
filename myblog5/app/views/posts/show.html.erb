@@ -1,4 +1,6 @@
-<h2><%= @post.title %></h2>
+<h1><%= link_to "blog-page ← ", root_path, class: 'toppage' %></h1>
+
+<h2>title : <%= @post.title %></h2>
 
 <p>
   <%= simple_format @post.body %>

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy]
   end
 
-  resources :heros
-  
+  get 'heros/index'
+  get 'heros/new'
+  post 'heros/new' => 'heros#new'
+
 end

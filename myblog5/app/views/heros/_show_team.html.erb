@@ -1,0 +1,31 @@
+<% @team_number.times do %>
+    <% rand_num = rand(1..1000) %>
+   <% set_num = rand(1..4) %>
+    <% bg = rand(1..2) %>
+
+    <% if set_num == 1 %>
+      <% set = "set1" %>
+    <% elsif set_num == 2 %>
+      <% set = "set2" %>
+    <% elsif set_num == 3 %>
+     <% set = "set3" %>
+    <% else %>
+      <% set = "set4" %>
+    <% end %>
+
+    <% if bg == 1 %>
+      <% background = "bg1" %>
+    <% else %>
+      <% background = "bg2" %>
+    <% end %>
+
+    <% avatar = Faker::Avatar.image(rand_num, "350x350", "png", set, background) %>
+    <%= image_tag avatar %>
+
+      <br/><br/>
+
+      <h3>
+        Your Superhero Name:<br/>
+        <%= Faker::Superhero.name %>
+      </h3>
+<% end %>
