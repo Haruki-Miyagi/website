@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   get 'heros/new'
   post 'heros/new' => 'heros#new'
 
+  get 'stocks/index'
+  post 'stocks/index'
+
 end

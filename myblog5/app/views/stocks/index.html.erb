@@ -1,0 +1,21 @@
+<h2>stocker</h2>
+
+<%= form_for stocks_index_path, method: :post do %>
+  <div class="form-group">
+    <%= text_field_tag 'id', nil, placeholder: 'Enter Conpany Ticker Symbol', size: 50, class: 'form-control' %>
+
+    <br/><br/>
+    <%= submit_tag 'Luckup stock quote', class: "btn btn-default btn-xs" %>
+  </div>
+<% end %>
+<br/><br/>
+
+<% if @stock %>
+  <%= @stock.name %>
+<% elsif @notice %>
+  <%= @notice %>
+<% end %>
+
+<% if @errors %>
+  <%= @errors %>
+<% end %>
