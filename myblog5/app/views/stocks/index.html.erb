@@ -8,14 +8,22 @@
     <%= submit_tag 'Luckup stock quote', class: "btn btn-default btn-xs" %>
   </div>
 <% end %>
-<br/><br/>
+<br/>
 
 <% if @stock %>
-  <%= @stock.name %>
+  <p class="margin-right">Conpany name:</p><%= @stock.name %> - <%= @stock.symbol %><br/>
+  <p class="margin-right">Current ask:</p><%= @stock.l %><br/>
+  <p class="margin-right">Earrings per share:</p><%= @stock.eps %><br/>
+  <p class="margin-right">Price/Earning Ratio:</p><%= @stock.pe %><br/>
+  <p class="margin-right">Market cap:</p><%= @stock.mc %><br/>
+  <p class="margin-right">Stock Open:</p><%= @stock.op %><br/>
+  <p class="margin-right">Day's Range:</p><%= @stock.lo %> - <%= @stock.hi %><br/>
+  <p class="margin-right">Year High:</p><%= @stock.hi52 %><br/>
+  <p class="margin-right">Year Low:</p><%= @stock.lo52 %><br/>
 <% elsif @notice %>
   <%= @notice %>
 <% end %>
 
 <% if @errors %>
-  <%= @errors %>
+    <%= @errors %>
 <% end %>
