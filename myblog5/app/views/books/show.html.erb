@@ -1,9 +1,24 @@
-<p id="notice"><%= notice %></p>
+<% begin %>
+<%  @stock_quote = StockQuote::Stock.quote(@book.title) %>
+  <% rescue StandardError %>
+<% end %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @stock_quote.name %> - <%= @stock_quote.symbol %></h3>
+  </div>
+  <div class="panel-body">
+    <p class="margin-right">Current ask:</p><%= @stock_quote.l %><br/>
+    <p class="margin-right">Earrings per share:</p><%= @stock_quote.eps %><br/>
+    <p class="margin-right">Price/Earning Ratio:</p><%= @stock_quote.pe %><br/>
+    <p class="margin-right">Market cap:</p><%= @stock_quote.mc %><br/>
+    <p class="margin-right">Stock Open:</p><%= @stock_quote.op %><br/>
+    <p class="margin-right">Day's Range:</p><%= @stock_quote.lo %> - <%= @stock_quote.hi %><br/>
+    <p class="margin-right">Year High:</p><%= @stock_quote.hi52 %><br/>
+    <p class="margin-right">Year Low:</p><%= @stock_quote.lo52 %><br/>
+  </div>
+</div>
+
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
