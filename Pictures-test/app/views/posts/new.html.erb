@@ -1,1 +1,7 @@
-<h1>new</h1>
+<h1>Add new Image</h1>
+
+<%= simple_form_for @post do |f| %>
+  <%= f.input :image %>
+  <%= f.input :title %>
+  <%= f.submit %>
+<% end %>
