@@ -10,11 +10,17 @@
             <p class="title">
                 <%= @post.title %>
             </p>
-            <div class="text-center edit-links">
-                <%= link_to "Back to Post images", posts_path, class: "btn btn-primary" %>
-                <%= link_to 'Edit Post', edit_post_path(@post), class: "btn btn-success" %>
-                <%= link_to 'Delete Post', post_path(@post), method: :DELETE, data: {confirm: "Are you sure you want to delete this post?"}, class: "btn btn-danger" %>
-            </div>
+            <% if @post.user.id == current_user.id %>
+              <div class="text-center edit-links">
+                  <%= link_to "Back to Post images", posts_path, class: "btn btn-primary" %>
+                  <%= link_to 'Edit Post', edit_post_path(@post), class: "btn btn-success" %>
+                  <%= link_to 'Delete Post', post_path(@post), method: :DELETE, data: {confirm: "Are you sure you want to delete this post?"}, class: "btn btn-danger" %>
+              </div>
+            <% else %>
+              <div class="text-center edit-links">
+                  <%= link_to "Back to Post images", posts_path, class: "btn btn-primary" %>
+              </div>
+            <% end %>
         </div>
     </div>
 </div>
