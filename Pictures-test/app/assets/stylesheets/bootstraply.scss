@@ -4,7 +4,7 @@
 
 body {
   background-color: #fafafa;
-  font-family: prozima-nova, 'Helvetica', Arial, Helvetica, sans-serif;
+  font-family: proxima-nova, 'Helvetica', Arial, Helvetica, sans-serif;
 }
 
 .navbar-brand {
@@ -21,7 +21,7 @@ body {
   }
 }
 .navbar-container {
-  width: 900px;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -50,42 +50,90 @@ h1 {
 
 .post-head {
   height: 64px;
-  padding: 14px 20px;
+  padding: 24px;
   color: #125688;
   font-size: 15px;
   line-height: 18px;
-  .thumbnail {}
-  .name {
-      display: block;
+  .user-name, .time-ago {
+    display: inline;
+  }
+  .user-name {
+      font-weight: 500;
+      font-size: 20px;
+  }
+  .time-ago {
+    color: #A5A7AA;
+    float: right;
+  }
+  .image {
+    border-bottom: 1px solid #eeefef;
+    border-top: 1px solid #eeefef;
   }
 }
 
-.image {
-  border-bottom: 1px solid #eeefef;
-  border-top: 1px solid #eeefef;
-}
-img {
-    width: 640px;
-    height: 370px;
-}
-
-.title {
-  padding: 24px 24px;
+.post-bottom {
+  .user-name, .comment-content{
+    display: inline;
+  }
+  .title {
+    margin-bottom: 7px;
+  }
+  .user-name {
+    font-weight: 500;
+    margin-right: 0.3em;
+    font-size: 15px;
+    color: #125688;
+  }
+  .user-name, .title-content {
+    display: inline;
+  }
+  #comment {
+    margin-top: 7px;
+    .user-name {
+      font-weight: 500;
+      margin-right: 0.3em;
+    }
+    .delete-comment {
+      float: right;
+      color: #515151;
+    }
+  }
+  margin: 0 0 7px 0;
+  padding: 24px 24px 10px 24px;
   font-size: 15px;
   line-height: 18px;
 }
 
+.comment-content {
+  font-size: 15px;
+  line-height: 18px;
+  border: 1px medium none;
+  width: 100%;
+  color: #4B4F54;
+}
+.comment-like-form {
+  padding-top: 24px;
+  margin: 24px 24px 0 24px;
+  min-height: 68px;
+  align-items: center;
+  border-top: 1px solid #eeefef;
+  flex-direction: row;
+  justify-content: center;
+}
 .form-wrapper {
   width: 60%;
   margin: 20px auto;
   background-color: #fff;
   padding: 40px;
-  border :1px solid #eeefef;
+  border: 1px solid #eeefef;
   border-radius: 3px;
 }
-
 .edit-links {
-  margin-top: 20px;
-  margin-bottom: 40px;
-  margin-right: 285px;
+  margin: 20px 0 40px 0;
+}
+
+
+img {
+    width: 640px;
+    height: 370px;
 }
