@@ -1,0 +1,26 @@
+<div class="posts-wrapper row" >
+    <div class="post">
+        <div class="post-head">
+            Posted by Bluelime Learning
+        </div>
+    </div>
+    <div class="name">
+        <div class="image center-block">
+            <%= image_tag @user.posts.image.url(:medium) %>
+            <p class="title">
+                <%= @user.posts.title %>
+            </p>
+            <% if @user == current_user %>
+              <div class="text-center edit-links">
+                  <%= link_to "Back to Post images", posts_path, class: "btn btn-primary" %>
+                  <%= link_to 'Edit Post', edit_post_path(@user), class: "btn btn-success" %>
+                  <%= link_to 'Delete Post', post_path(@user), method: :DELETE, data: {confirm: "Are you sure you want to delete this post?"}, class: "btn btn-danger" %>
+              </div>
+            <% else %>
+              <div class="text-center edit-links">
+                  <%= link_to "Back to Post images", posts_path, class: "btn btn-primary" %>
+              </div>
+            <% end %>
+        </div>
+    </div>
+</div>

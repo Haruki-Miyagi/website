@@ -76,7 +76,9 @@ h1 {
     display: inline;
   }
   .title {
+    font-size: 20px;
     margin-bottom: 7px;
+    padding: 9px;
   }
   .user-name {
     font-weight: 500;
@@ -85,6 +87,7 @@ h1 {
     color: #125688;
   }
   .user-name, .title-content {
+    padding: 0 0 5px 0;
     display: inline;
   }
   #comment {
