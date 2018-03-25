@@ -5,18 +5,21 @@
               <%= form_for @user, url: {action: "update"}, html: {multipart: true} do |f| %>
               <div class="row">
                 <div class="col-md-12">
+                  <div class="text-count-post">
+                    <h4>Posts Count: <%= pluralize @user.posts.count, 'post' %></h4>
+                  </div>
                   <div class="form-group text-center" >
                     <h4>Change Your Profile image: </h4>
                     <%= profile_avatar_select(@user) %>
                   </div>
-                  <%= f.file_field :avatar, onChange: 'loadFile(event)' %>
+                  <%= f.file_field :avatar, onChange: 'loadFile(event)', class: 'text-center text-align' %>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group text-center" >
                     <h4>Update Your bio: </h4>
-                    <%= f.text_area :bio, row: 4 %>
+                    <%= f.text_area :bio, rows: 5, cols: 50 %>
                   </div>
                 </div>
               </div>
